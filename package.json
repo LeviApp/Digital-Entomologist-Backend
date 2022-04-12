@@ -4,6 +4,7 @@
   "description": "Backend for Digital Entomologist Project",
   "main": "index.js",
   "scripts": {
+    "serve": "nodemon index.js",
     "test": "test"
   },
   "repository": {
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/LeviApp/Digital-Entomologist-Backend/issues"
   },
-  "homepage": "https://github.com/LeviApp/Digital-Entomologist-Backend#readme"
+  "homepage": "https://github.com/LeviApp/Digital-Entomologist-Backend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "morgan": "^1.10.0"
+  }
 }

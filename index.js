@@ -1,3 +1,23 @@
+
+const express = require("express");
+const morgan = require('morgan')
+
+const server = express();
+
+// Connect Mongo Database
+const dbURI = "mongodb+srv://leviapp:<password>@digital-entomologist.9tmva.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+const PORT = process.env.PORT || '1111'
+
+server.use(morgan("tiny"))
+server.use(express.json());
+
+server.get('/', (req, res) => {
+    res.send("{ message: 'working so far' }");
+  });
+
+server.listen(PORT, () => console.log(`Server is running on port http://localhost:${PORT}`))
+
 // db.solutions.insert({
 //     id: 1,
 //     user: {
